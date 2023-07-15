@@ -1,7 +1,7 @@
 FROM node:16-alpine
 WORKDIR /home/ilovedocker/app
 RUN pwd && ls -la
-COPY package*.json /package
+COPY package*.json ./package
 RUN npm i
 COPY . ./src
 EXPOSE 3032
